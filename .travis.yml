@@ -9,6 +9,7 @@ services:
   - docker
 addons:
   artifacts:
+    s3_region: "us-east-2"
     paths:
       - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le.so
       - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le-musl.so
