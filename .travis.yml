@@ -28,14 +28,3 @@ install:
 
 script:
   - make jclean clean $CMD
-
-deploy:
-  provider: releases
-  api_key:
-    secure: "$API_KEY"
-  file:
-    - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le-musl.so
-    - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le.so
-  skip_cleanup: true
-  on:
-    tags: true
