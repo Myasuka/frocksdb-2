@@ -10,10 +10,12 @@ services:
 addons:
   artifacts:
     paths:
-      - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le-musl.so
       - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le.so
+      - $TRAVIS_BUILD_DIR/java/target/librocksdbjni-linux-ppc64le-musl.so
 
 env:
+  global:
+    - ARTIFACTS_BUCKET=myasuka
   jobs:
     - CMD=rocksdbjavastaticdockerppc64le
     - CMD=rocksdbjavastaticdockerppc64lemusl
