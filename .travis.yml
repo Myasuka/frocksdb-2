@@ -16,7 +16,7 @@ addons:
 
 env:
   global:
-    - ARTIFACTS_BUCKET=myasuka
+    - ARTIFACTS_BUCKET=frocksdb
   jobs:
     - CMD=rocksdbjavastaticdockerppc64le
     - CMD=rocksdbjavastaticdockerppc64lemusl
